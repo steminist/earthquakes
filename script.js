@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var REQUEST_URL = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_hour.geojson';
+    var REQUEST_URL = 'https://crossorigin.me/http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_hour.geojson';
     var objectContainer = $('#container');
     var responses = {
     objects: [],
@@ -18,7 +18,7 @@ $(document).ready(function(){
       responses.hasError = true;
     }).always(function() {
       responses.firstLoad = true;
-      renderInsult();
+      renderObject();
     });
   }
 
